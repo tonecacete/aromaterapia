@@ -1,3 +1,5 @@
+import { CriarReceitaComponent } from './body/receitas/criar-receita/criar-receita.component';
+import { ReceitasComponent } from './body/receitas/receitas.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
@@ -7,12 +9,17 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/services/login.service';
+import { CriarReceitaService } from './body/receitas/services/criar-receita.service';
+import { ReceitaComponent } from './body/receitas/receita/receita.component';
 
 @NgModule({
   declarations: [			
     AppComponent,
     HeaderComponent,
       BodyComponent,
+      ReceitasComponent,
+      ReceitaComponent,
+      CriarReceitaComponent,
       LoginComponent
    ],
   imports: [
@@ -20,7 +27,7 @@ import { LoginService } from './login/services/login.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [LoginService],
+  providers: [LoginService, CriarReceitaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

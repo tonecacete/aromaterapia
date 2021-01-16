@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./body.component.scss']
 })
 export class BodyComponent implements OnInit {
-
+  hideButton = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  hideAddButton(flag){
+    this.hideButton = true;
   }
 
 }
